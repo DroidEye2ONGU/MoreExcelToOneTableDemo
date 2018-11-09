@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="beneficiary.dao.BeneficiaryScholarMapper">
+    <insert id="insertOne" parameterType="beneficiary.model.BeneficiaryScholar">
+        INSERT INTO project_beneficiary_scholar (ID, PROJECT_ID, HELP_SCHOOL, GRADE, BENEFIT, BENEFIT_NAME)
+        VALUES (#{id},#{projectId},#{helpSchool},#{grade},#{benefit},#{benefitName})
+    </insert>
+</mapper>

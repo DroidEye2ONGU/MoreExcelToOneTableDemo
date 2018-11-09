@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置四要素 -->
+    <properties resource="mybatis_jdbc.properties"></properties>
+    <!-- 配置环境 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+                <property name="poolMaximumActiveConnections" value="1000"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 引入sql映射文件 -->
+    <mappers>
+        <mapper resource="mapper/BeneficiaryHelpMapper.xml"/>
+        <mapper resource="mapper/BeneficiaryScholarMapper.xml"/>
+    </mappers>
+</configuration> 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="beneficiary.dao.BeneficiaryHelpMapper">
+    <insert id="insertOne" parameterType="beneficiary.model.BeneficiaryHelp">
+        INSERT INTO beneficiarytest.project_beneficiary_help (ID, PROJECT_ID, HELP_TYPE, BENEFIT_NAME, BENEFIT)
+        VALUES (#{id},#{projectId},#{helpType},#{benefitName},#{benefit})
+    </insert>
+</mapper>
